@@ -276,7 +276,31 @@
             "./config/packages/messenger.yaml"
         ]
     },
+    "symfonycasts/reset-password-bundle": {
+        "version": "1.16",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "97c1627c0384534997ae1047b93be517ca16de43"
+        },
+        "files": [
+            "./config/packages/reset_password.yaml"
+        ]
+    },
     "twig/extra-bundle": {
         "version": "v3.5.0"
+    },
+    "zenstruck/foundry": {
+        "version": "1.27",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.10",
+            "ref": "37c2f894cc098ab4c08874b80cccc8e2f8de7976"
+        },
+        "files": [
+            "./config/packages/zenstruck_foundry.yaml"
+        ]
     }
 }
