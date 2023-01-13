@@ -43,15 +43,17 @@ final class UserFactory extends ModelFactory
      * @see https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html#model-factories
      *
      * @todo add your default values here
+     * le mote de pass est 123456
      */
     protected function getDefaults(): array
     {
         return [
-            'email' => self::faker()->text(180),
-            'is_verified' => self::faker()->boolean(),
-            'locale' => self::faker()->text(10),
-            'password' => self::faker()->text(),
-            'roles' => [],
+            'email' => 'admin@gmail.com',
+            'roles' => ['ROLE_ADMIN'],
+            'password' => '$2y$13$w7usfxJhm1MP8qjT8TDNzOq.UuYWFuZszfwqX/agMwG8JeqWgacZ.',
+            'username' => 'Admin',
+            'locale' => 'fr',
+            'is_verified' => 1
         ];
     }
 

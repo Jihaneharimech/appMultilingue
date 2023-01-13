@@ -47,7 +47,7 @@ final class FiliereFactory extends ModelFactory
     protected function getDefaults(): array
     {
         return [
-            'nom' => self::faker()->text(255),
+            'nom' => self::faker()->realtext(10),
         ];
     }
 
