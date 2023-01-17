@@ -21,11 +21,11 @@ class Note
 
     #[ORM\ManyToOne(inversedBy: 'notes')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?etudiant $etudiant = null;
+    private ?Etudiant $etudiant = null;
 
     #[ORM\ManyToOne(inversedBy: 'notes')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?module $module = null;
+    private ?Module $module = null;
 
     public function getNote(): ?float
     {

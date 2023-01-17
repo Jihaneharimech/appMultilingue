@@ -17,7 +17,7 @@ use App\Entity\User;
 
 class DashboardController extends AbstractDashboardController
 {
-    #[Route('/admin', name: 'admin')]
+    #[Route('/admin', name: 'dashboard')]
     public function index(): Response
     {
         return parent::index();
@@ -49,12 +49,12 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Filiere', 'fas fa-list', Filiere::class);
-        yield MenuItem::linkToCrud('Semestre', 'fas fa-list', Semestre::class);
-        yield MenuItem::linkToCrud('Enseignant', 'fas fa-list', Etudiant::class);
-        yield MenuItem::linkToCrud('Module', 'fas fa-list', Module::class);
-        yield MenuItem::linkToCrud('Etudiant', 'fas fa-list', Etudiant::class);
-        yield MenuItem::linkToCrud('note', 'fas fa-list', Note::class);
-        yield MenuItem::linkToCrud('User', 'fas fa-list', User::class);
+        yield MenuItem::linkToCrud('Semestre', 'fas fa-book', Semestre::class);
+        yield MenuItem::linkToCrud('Enseignant', 'fas fa-user-tie', Etudiant::class);
+        yield MenuItem::linkToCrud('Module', 'fas fa-vial-circle-check', Module::class);
+        yield MenuItem::linkToCrud('Etudiant', 'fas fa-user-graduate', Etudiant::class);
+        yield MenuItem::linkToCrud('Note', 'fas fa-sticky-note', Note::class);
+        yield MenuItem::linkToCrud('User', 'fas fa-user', User::class);
     }
 
 

@@ -20,14 +20,14 @@ class Module
 
     #[ORM\ManyToOne(inversedBy: 'modules')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?enseignant $enseignant = null;
+    private ?Enseignant $enseignant = null;
 
     #[ORM\ManyToOne(inversedBy: 'modules')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?filiere $filiere = null;
+    private ?Filiere $filiere = null;
 
     #[ORM\ManyToOne(inversedBy: 'modules')]
-    private ?semestre $semestre = null;
+    private ?Semestre $semestre = null;
 
     #[ORM\OneToMany(mappedBy: 'module', targetEntity: Note::class)]
     private Collection $notes;
